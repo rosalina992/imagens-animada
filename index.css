@@ -1,0 +1,59 @@
+*{
+  padding: 0;
+  margin: 0; 
+  box-sizing: border-box;  
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+.popsicle{
+    position: relative;
+    width: 150px;
+    height: 230px ;
+    
+    
+    border: 3px solid black ;
+border-top-left-radius: 75px ;
+border-top-right-radius: 75px;
+background:  repeating-linear-gradient(
+    315deg,
+    yellow 0%, yellow 10%,
+    aqua  10%, aqua 20%,
+    red  20%, red  30%,
+    blue   30%, blue 40%,
+    aquamarine  40%, aquamarine 50%
+    
+    );
+    
+    background-size: 200% 200%;
+    animation: popsicle-animation 5s linear infinite forwards;
+}
+@keyframes popsicle-animation{
+    from{
+      background-position: 0% 0%;  
+    }
+    to{
+       background-position: 100% 100%; 
+    }
+}
+
+.stick{
+    position: absolute;
+    bottom: -80px;
+    left: 50%;
+    
+    margin-left: -23px;
+    width: 40px;
+    height: 80px;
+    border: 3px solid black ;
+
+    border-bottom-left-radius:20px ;
+    border-bottom-right-radius: 20px;
+    background: #ff5722;
+}
